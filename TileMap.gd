@@ -29,10 +29,14 @@ func _physics_process(delta):
 	for cell in cells_to_set:
 		self.set_cell(0,cell,1,Vector2i(0,0))
 
-		
 
-
-func _on_button_pressed():
+func _on_speed_up_pressed():
 	ticks = Engine.get_physics_ticks_per_second()
 	new_ticks = min(ticks + ticks/10+1,60)
+	Engine.set_physics_ticks_per_second(new_ticks)
+
+
+func _on_speed_down_pressed():
+	ticks = Engine.get_physics_ticks_per_second()
+	new_ticks = max(ticks - ticks/10-1,1)
 	Engine.set_physics_ticks_per_second(new_ticks)

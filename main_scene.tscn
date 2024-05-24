@@ -29,12 +29,23 @@ format = 2
 layer_0/tile_data = PackedInt32Array(589831, 1, 0, 655367, 1, 0, 655368, 1, 0, 589832, 1, 0, 655377, 1, 0, 589841, 1, 0, 720913, 1, 0, 524306, 1, 0, 458771, 1, 0, 458772, 1, 0, 786450, 1, 0, 851987, 1, 0, 851988, 1, 0, 786454, 1, 0, 524310, 1, 0, 589847, 1, 0, 655383, 1, 0, 720919, 1, 0, 655384, 1, 0, 655381, 1, 0, 589852, 1, 0, 589851, 1, 0, 524315, 1, 0, 524316, 1, 0, 458779, 1, 0, 458780, 1, 0, 393245, 1, 0, 655389, 1, 0, 393247, 1, 0, 327711, 1, 0, 655391, 1, 0, 720927, 1, 0, 458793, 1, 0, 458794, 1, 0, 524329, 1, 0, 524330, 1, 0)
 script = ExtResource("2_ei6er")
 
-[node name="Button+" type="Button" parent="."]
-offset_left = 746.0
+[node name="SpeedUp" type="Button" parent="."]
+offset_left = 889.0
 offset_top = 16.0
-offset_right = 801.0
+offset_right = 944.0
 offset_bottom = 68.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
 theme_override_font_sizes/font_size = 31
 text = "+"
 
-[connection signal="pressed" from="Button+" to="TileMap" method="_on_button_pressed"]
+[node name="SpeedDown" type="Button" parent="."]
+offset_left = 953.0
+offset_top = 16.0
+offset_right = 1008.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 31
+text = "-"
+
+[connection signal="pressed" from="SpeedUp" to="TileMap" method="_on_speed_up_pressed"]
+[connection signal="pressed" from="SpeedDown" to="TileMap" method="_on_speed_down_pressed"]
