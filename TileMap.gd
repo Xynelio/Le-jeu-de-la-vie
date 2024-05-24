@@ -1,12 +1,11 @@
 extends TileMap
-
+var ticks
+var new_ticks
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 	#print(self.get_used_cells(0))
-	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -24,3 +23,9 @@ func _physics_process(delta):
 				if nb_living_cells in [0, 1, 4, 5, 6, 7, 8]:
 					self.erase_cell(0, Vector2i(x,y))
 		
+
+
+func _on_button_pressed():
+	ticks = Engine.get_physics_ticks_per_second()
+	new_ticks = min(ticks + ticks/10+1,60)
+	Engine.set_physics_ticks_per_second(new_ticks)

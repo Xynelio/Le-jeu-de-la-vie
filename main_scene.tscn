@@ -28,3 +28,13 @@ rendering_quadrant_size = 1
 format = 2
 layer_0/tile_data = PackedInt32Array(65536, 1, 0, 262150, 1, 0, 262151, 1, 0, 524296, 1, 0, 524297, 1, 0, 589833, 1, 0, 589834, 1, 0, 655370, 1, 0, 655369, 1, 0, 589826, 1, 0, 196620, 1, 0, 262157, 1, 0, 524306, 1, 0, 720915, 1, 0, 786449, 1, 0, 131093, 1, 0, 131092, 1, 0, 131091, 1, 0, 65555, 1, 0, 196627, 1, 0, 262163, 1, 0, 262164, 1, 0, 655385, 1, 0, 589848, 1, 0, 589847, 1, 0, 524311, 1, 0, 655384, 1, 0, 851991, 1, 0, 851990, 1, 0, 786451, 1, 0, 720912, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1114120, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1179658, 1, 0)
 script = ExtResource("2_ei6er")
+
+[node name="Button+" type="Button" parent="."]
+offset_left = 746.0
+offset_top = 16.0
+offset_right = 801.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 31
+text = "+"
+
+[connection signal="pressed" from="Button+" to="TileMap" method="_on_button_pressed"]
