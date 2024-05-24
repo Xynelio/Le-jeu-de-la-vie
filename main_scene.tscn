@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://d3vfrm4fmanxo"]
+[gd_scene load_steps=5 format=3 uid="uid://d3vfrm4fmanxo"]
+
+[ext_resource type="Texture2D" uid="uid://vj7qm15pg3ug" path="res://blach_white_tiles.png" id="1_ogv22"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_ei6er"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7u1ew"]
+texture = ExtResource("1_ogv22")
+texture_region_size = Vector2i(1, 1)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_skbps"]
+tile_size = Vector2i(1, 1)
+sources/1 = SubResource("TileSetAtlasSource_7u1ew")
 
 [node name="mainScene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(20, 20)
+tile_set = SubResource("TileSet_skbps")
+rendering_quadrant_size = 1
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 1, 0, 262150, 1, 0, 262151, 1, 0, 524296, 1, 0, 524297, 1, 0, 589833, 1, 0, 589834, 1, 0, 655370, 1, 0, 655369, 1, 0, 589826, 1, 0, 196620, 1, 0, 262157, 1, 0, 524306, 1, 0, 720915, 1, 0, 786449, 1, 0, 131093, 1, 0, 131092, 1, 0, 131091, 1, 0, 65555, 1, 0, 196627, 1, 0, 262163, 1, 0, 262164, 1, 0, 655385, 1, 0, 589848, 1, 0, 589847, 1, 0, 524311, 1, 0, 655384, 1, 0, 851991, 1, 0, 851990, 1, 0, 786451, 1, 0, 720912, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1114120, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1179658, 1, 0)
+script = ExtResource("2_ei6er")
