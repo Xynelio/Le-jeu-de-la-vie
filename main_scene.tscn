@@ -16,7 +16,7 @@ sources/1 = SubResource("TileSetAtlasSource_7u1ew")
 [node name="mainScene" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-scale = Vector2(20, 20)
+scale = Vector2(14, 14)
 tile_set = SubResource("TileSet_skbps")
 rendering_quadrant_size = 1
 format = 2
